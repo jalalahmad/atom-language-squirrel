@@ -1,0 +1,46 @@
+"*":
+  class:
+    prefix: "class"
+    body: '''
+      class $1 ${2:extends ${3:Parent}} {
+      	$0
+      }
+    '''
+  constructor:
+    prefix: "constr"
+    body: '''
+      constructor($1) {
+      	${2:base.constructor($3)}
+      	$0
+      }
+    '''
+  for:
+    prefix: "for"
+    body: '''
+      for ($1; $2; $3) {
+      	$0
+      }
+    '''
+  foreach:
+    prefix: "foreach"
+    body: '''
+      foreach ($1 in $2) {
+      	$0
+      }
+    '''
+  function:
+    prefix: "func"
+    body: '''
+      function $1($2) {
+      	$0
+      }
+    '''
+  if:
+    prefix: "if"
+    body: "if (${1:true}) {${0:$TM_SELECTED_TEXT}}"
+  local:
+    prefix: "l"
+    body: "local $0"
+  print:
+    prefix: "p"
+    body: "print($0)"

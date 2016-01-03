@@ -1,2 +1,3 @@
-# atom-language-squirrel
-Atom syntax and snippet support for Squirrel Language
+# language-squirrel package
+
+A short description of your package.
